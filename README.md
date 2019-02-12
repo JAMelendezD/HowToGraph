@@ -55,5 +55,5 @@ Finally here are some sample images created with this repository.
 </p>
 
 <p align="center">
-  <img width="600" src="./pymol/media/map3.png">
+  <img width="700" src="./pymol/media/map3.png">
 </p>
