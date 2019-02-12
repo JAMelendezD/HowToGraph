@@ -18,7 +18,7 @@ Basic scripts using matplot to create high quality plots, animations, 3d plots a
 
 ## Pymol
 
-I have written a short script to create 3 dimensional functions and vizualise them using pymol. This can be very useful since all the advantages from pymol can be used on the graphs such as different representations, color and ray tracing.
+I have written a short script to create 3 dimensional functions and vizualise them using pymol. This can be very useful since all the advantages from pymol can be used on the graphs such as different representations, color (linearly scaled so that 0 is the minimum value) and ray tracing.
 
 For this to work you will need to install pymol:
 
