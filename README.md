@@ -9,7 +9,7 @@ Basic scripts using matplot to create high quality plots, animations, 3d plots a
 </p>
 
 <p align="center">
-  <img width="800" src="./matplotlib/Images/violin.png">
+  <img width="1000" src="./matplotlib/Images/violin.png">
 </p>
 
 <p align="center">
