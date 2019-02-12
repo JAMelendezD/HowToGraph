@@ -2,7 +2,7 @@
 
 ## Matplotlib
 
-Basic scripts using matplot to create high quality plots, animations, 3d plots and much more.
+Basic scripts using matplot to create high quality plots, animations, 3d plots and much more. 
 
 ## Pymol
 
