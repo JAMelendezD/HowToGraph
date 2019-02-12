@@ -39,21 +39,21 @@ For information about the parameters you can type `python3 functiontopymol.py -h
 Finally here are some sample images created with this repository.
 
 <p align="center">
-  <img width="800" src="./pymol/media/example1.png">
+  <img width="600" src="./pymol/media/example1.png">
 </p>
 
 <p align="center">
-  <img width="800" src="./pymol/media/example2.png">
+  <img width="600" src="./pymol/media/example2.png">
 </p>
 
 <p align="center">
-  <img width="800" src="./pymol/media/example4.png">
+  <img width="600" src="./pymol/media/example4.png">
 </p>
 
 <p align="center">
-  <img width="800" src="./pymol/media/map2.png">
+  <img width="600" src="./pymol/media/map2.png">
 </p>
 
 <p align="center">
-  <img width="800" src="./pymol/media/map3.png">
+  <img width="600" src="./pymol/media/map3.png">
 </p>
