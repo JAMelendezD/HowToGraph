@@ -5,15 +5,15 @@
 Basic scripts using matplot to create high quality plots, animations, 3d plots and much more. 
 
 <p align="center">
-  <img width="800" src="./matplotlib/images/histogram_subplots.png">
+  <img width="800" src="./matplotlib/Images/histogram_subplots.png">
 </p>
 
 <p align="center">
-  <img width="800" src="./matplotlib/media/violin.png">
+  <img width="800" src="./matplotlib/Images/violin.png">
 </p>
 
 <p align="center">
-  <img width="800" src="./matplotlib/media/xkcd.png">
+  <img width="800" src="./matplotlib/Images/xkcd.png">
 </p>
 
 ## Pymol
