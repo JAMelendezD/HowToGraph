@@ -4,6 +4,18 @@
 
 Basic scripts using matplot to create high quality plots, animations, 3d plots and much more. 
 
+<p align="center">
+  <img width="800" src="./media/example3.png">
+</p>
+
+<p align="center">
+  <img width="800" src="./media/example3.png">
+</p>
+
+<p align="center">
+  <img width="800" src="./media/example3.png">
+</p>
+
 ## Pymol
 
 I have written a short script to create 3 dimensional functions and vizualise them using pymol. This can be very useful since all the advantages from pymol can be used on the graphs such as different representations, color and ray tracing.
