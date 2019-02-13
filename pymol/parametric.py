@@ -11,7 +11,7 @@ zsize = 80.111
 
 #arguments from terminal
 parser = argparse.ArgumentParser()
-parser.add_argument("plot", type=str, help="Your desire plot: sphere, curves, spiral, torus, klein8, kleinbot,shell,booster")
+parser.add_argument("plot", type=str, help="Your desire plot: sphere, curves, spiral, torus, klein8, kleinbot,shell,booster,dna")
 parser.add_argument("llt", type=float, help="Lower limit theta")
 parser.add_argument("ult", type=float, help="Upper limit theta")
 parser.add_argument("llp", type=float, help="Lower limit phi")
@@ -43,6 +43,16 @@ if plot == 'sphere':
 	y = r*sin(P)*sin(T)
 	z = r*cos(T)
 
+if plot == 'dna':
+	grid = args.grid
+	area = grid*grid
+	p = np.linspace(args.llp,args.ulp,grid)
+	t = np.linspace(args.llt,args.ult,grid)
+	P,T = np.meshgrid(p, t)
+	r = factor
+	x = r*cos(P)*cos(T)
+	y = r*sin(T)*cos(P)
+	z = r*T
 
 if plot == 'torus':
 	grid = args.grid
@@ -54,7 +64,6 @@ if plot == 'torus':
 	x = r*(2+cos(P))*cos(T)
 	y = r*(2+cos(P))*sin(T)
 	z = r*sin(P)
-
 
 if plot == 'curves':
 	grid = args.grid
