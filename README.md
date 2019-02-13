@@ -41,7 +41,7 @@ If you want to try a parametric equation you can run it as follows:
 `python3 parametric.py new 0 6.28 0 6.28 100 80 1 '('2+cos'('P')'')'*cos'('T')' '('2+cos'('P')'')'*sin'('T')' sin'('P')'`
 
 <p align="center">
-  <img width="800" src="./pymol/media/example3.png">
+  <img width="800" src="./pymol/media/torus.png">
 </p>
 
 For information about the parameters you can type `python3 functiontopymol.py -h`. Pymol can also be downloaded in windows however if the path is not correctly set up, the program will still work but you have to open pymol manually and type in the pymol terminal: 
@@ -52,20 +52,18 @@ Another main advantage of pymol is that you can save the image as a wrl format t
 
 <p align="center">
   <img width="200" src="./pymol/media/example1.png">
-</p>
-
-<p align="center">
   <img width="200" src="./pymol/media/example2.png">
-</p>
-
-<p align="center">
   <img width="200" src="./pymol/media/example4.png">
 </p>
 
 <p align="center">
-  <img width="200" src="./pymol/media/map4.png">
+  <img width="200" src="./pymol/media/klein.png">
+  <img width="200" src="./pymol/media/kleindissect.png">
+  <img width="200" src="./pymol/media/curve.png">
 </p>
 
 <p align="center">
-  <img width="250" src="./pymol/media/map3.png">
+  <img width="200" src="./pymol/media/map4.png">
+  <img width="200" src="./pymol/media/map3.png">
+  <img width="200" src="./pymol/media/map2.png">
 </p>
