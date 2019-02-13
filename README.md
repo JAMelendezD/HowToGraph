@@ -38,7 +38,7 @@ If everything is correctly installed the program will create a function and open
 
 If you want to try a parametric equation you can run it as follows:
 
-`python3 parametric.py python3 parametric.py new 0 6.28 0 6.28 100 80 1 '('2+cos'('P')'')'*cos'('T')' '('2+cos'('P')'')'*sin'('T')' sin'('P')'`
+`python3 parametric.py new 0 6.28 0 6.28 100 80 1 '('2+cos'('P')'')'*cos'('T')' '('2+cos'('P')'')'*sin'('T')' sin'('P')'`
 
 <p align="center">
   <img width="800" src="./pymol/media/example3.png">
