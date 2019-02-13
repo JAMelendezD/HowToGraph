@@ -48,7 +48,7 @@ For information about the parameters you can type `python3 functiontopymol.py -h
 
 `run function.pml`
 
-Another main advantage of pymol is that you can save the image as a wrl format that can the be converted to .stl using a program such as meshlab, the stl format can then be used to 3d print any function you want. I suggest before creating the wrl file to change the representation to surface and make sure there are no holes you can change the grid and the scale factor to achieve better results. Here are some images generated with this repository including at the end a 3d figure printed with Creator Pro.
+Another main advantage of pymol is that you can save the image as a wrl format that can the be converted to .stl using a program such as meshlab, the stl format can then be used to 3d print any function you want. I suggest before creating the wrl file to change the representation to surface and make sure there are no holes you can change the grid and the scale factor to achieve better results. Here are some images generated with this repository including 3d figure printed with Creator Pro.
 
 <p align="center">
   <img width="300" src="./pymol/media/example1.png">
