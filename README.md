@@ -48,7 +48,7 @@ You can also use the module orbitals to graph electron orbitals (see images belo
 
 `python3 orbitals.py abs 2 0 100 50`
 
-For information about the parameters you can type `python3 functiontopymol.py -h`. Pymol can also be downloaded in windows however if the path is not correctly set up, the program will still work but you have to open pymol manually and type in the pymol terminal: 
+For information about the parameters you can use the `-h` flag. Pymol can also be downloaded in windows however if the path is not correctly set up, the program will still work but you have to open pymol manually and type in the pymol terminal: 
 
 `run showfunction.pml`
 
