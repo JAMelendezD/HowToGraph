@@ -1,8 +1,7 @@
 import numpy as np
 import os
 import argparse
-from numpy import sin, cos
-
+from numpy import sin, cos, exp, log, sqrt
 
 #cell size
 xsize = 80.111
@@ -11,37 +10,35 @@ zsize = 80.111
 
 #arguments from terminal
 parser = argparse.ArgumentParser()
-parser.add_argument("plot", type=str, help="Your desire plot: sphere, curves, spiral, torus, klein8, kleinbot,shell,booster,dna")
-parser.add_argument("llt", type=float, help="Lower limit theta")
-parser.add_argument("ult", type=float, help="Upper limit theta")
-parser.add_argument("llp", type=float, help="Lower limit phi")
-parser.add_argument("ulp", type=float, help="Upper limit phi")
+parser.add_argument("plot", type=str, help="Your desire plot: sphere, curves, spiral, torus, klein8, kleinbot, shell, booster, dna. If set to new you can type any function you desire in the last 3 arguments. If you are using an example type anything you want for the last 3 arguments.")
+parser.add_argument("llt", type=float, help="Lower limit theta.")
+parser.add_argument("ult", type=float, help="Upper limit theta.")
+parser.add_argument("llp", type=float, help="Lower limit phi.")
+parser.add_argument("ulp", type=float, help="Upper limit phi.")
 parser.add_argument("grid", type=int, help="Resolution for new equations maximum is 300")
 parser.add_argument("scale", type=int, help="Factor that rescales the coordinates minimum 50")
-parser.add_argument("r", type=str, help="Should be one or a function of T (theta) and P (Phi)")
-parser.add_argument("x", type=str, help="Insert the equation for x as a function of T (theta) and P (Phi)")
-parser.add_argument("y", type=str, help="Insert the equation for x as a function of T (theta) and P (Phi)")
-parser.add_argument("z", type=str, help="Insert the equation for x as a function of T (theta) and P (Phi)")
+parser.add_argument("x", type=str, help="Insert the equation for x as a function of T (theta) and P (Phi). You can use numpy functions without np. also if you use parentheses type them in between ''. ")
+parser.add_argument("y", type=str, help="Insert the equation for y as a function of T (theta) and P (Phi). You can use numpy functions without np. also if you use parentheses type them in between ''.")
+parser.add_argument("z", type=str, help="Insert the equation for z as a function of T (theta) and P (Phi). You can use numpy functions without np. also if you use parentheses type them in between ''.")
 args = parser.parse_args()
 
+#scale factor and type of plot
 plot = args.plot
-
 if args.ult > args.ulp:
 	factor = args.scale/args.ult
 else:
 	factor = args.scale/args.ulp
 
-
+#examples of different parametric plots
 if plot == 'sphere':
 	grid = args.grid
 	area = grid*grid
 	p = np.linspace(args.llp,args.ulp,grid)
 	t = np.linspace(args.llt,args.ult,grid)
 	P,T = np.meshgrid(p, t)
-	r = factor
-	x = r*cos(P)*sin(T)
-	y = r*sin(P)*sin(T)
-	z = r*cos(T)
+	x = factor*cos(P)*sin(T)
+	y = factor*sin(P)*sin(T)
+	z = factor*cos(T)
 
 if plot == 'dna':
 	grid = args.grid
@@ -49,10 +46,9 @@ if plot == 'dna':
 	p = np.linspace(args.llp,args.ulp,grid)
 	t = np.linspace(args.llt,args.ult,grid)
 	P,T = np.meshgrid(p, t)
-	r = factor
-	x = r*cos(P)*cos(T)
-	y = r*sin(T)*cos(P)
-	z = r*T
+	x = factor*cos(P)*cos(T)
+	y = factor*sin(T)*cos(P)
+	z = factor*T
 
 if plot == 'torus':
 	grid = args.grid
@@ -60,10 +56,9 @@ if plot == 'torus':
 	p = np.linspace(args.llp,args.ulp,grid)
 	t = np.linspace(args.llt,args.ult,grid)
 	P,T = np.meshgrid(p, t)
-	r = factor
-	x = r*(2+cos(P))*cos(T)
-	y = r*(2+cos(P))*sin(T)
-	z = r*sin(P)
+	x = factor*(2+cos(P))*cos(T)
+	y = factor*(2+cos(P))*sin(T)
+	z = factor*sin(P)
 
 if plot == 'curves':
 	grid = args.grid
@@ -71,10 +66,9 @@ if plot == 'curves':
 	p = np.linspace(args.llp,args.ulp,grid)
 	t = np.linspace(args.llt,args.ult,grid)
 	P,T = np.meshgrid(p, t)
-	r = factor*(2+sin(7*P+5*T))
-	x = r*cos(P)*sin(T)
-	y = r*sin(P)*sin(T)
-	z = r*cos(T)
+	x = factor*(2+sin(7*P+5*T))*cos(P)*sin(T)
+	y = factor*(2+sin(7*P+5*T))*sin(P)*sin(T)
+	z = factor*(2+sin(7*P+5*T))*cos(T)
 
 if plot == 'spiral':
 	grid = args.grid
@@ -82,10 +76,9 @@ if plot == 'spiral':
 	p = np.linspace(args.llp,args.ulp,grid)
 	t = np.linspace(args.llt,args.ult,grid)
 	P,T = np.meshgrid(p, t)
-	r = factor*(sin(4*P)**3+cos(2*P)**3+sin(6*T)**2+cos(6*T)**4)
-	x = r*sin(P)*cos(T)
-	y = r*cos(P)
-	z = r*sin(T)*sin(P)
+	x = factor*(sin(4*P)**3+cos(2*P)**3+sin(6*T)**2+cos(6*T)**4)*sin(P)*cos(T)
+	y = factor*(sin(4*P)**3+cos(2*P)**3+sin(6*T)**2+cos(6*T)**4)*cos(P)
+	z = factor*(sin(4*P)**3+cos(2*P)**3+sin(6*T)**2+cos(6*T)**4)*sin(T)*sin(P)
 
 if plot == 'kleinbot':
 	grid = args.grid
@@ -93,10 +86,9 @@ if plot == 'kleinbot':
 	p = np.linspace(args.llp,args.ulp,grid)
 	t = np.linspace(args.llt,args.ult,grid)
 	P,T = np.meshgrid(p, t)
-	r = factor
-	x = r*(-2/15*cos(P)*(3*cos(T)-30*sin(P)+90*cos(P)**4*sin(P)-60*cos(P)**6*sin(P)+5*cos(P)*sin(P)*cos(T)))
-	y = r*(-1/15*sin(P)*(3*cos(T)-3*cos(P)**2*cos(T)-48*cos(P)**4*cos(T)+48*cos(P)**6*cos(T)-60*sin(P)+5*cos(P)*sin(P)*cos(T)-5*cos(P)**3*sin(P)*cos(T)-80*cos(P)**5*sin(P)*cos(T)+80*cos(P)**7*sin(P)*cos(T)))
-	z = r*(3/15*(3+5*cos(P)*sin(P))*sin(T))
+	x = factor*(-2/15*cos(P)*(3*cos(T)-30*sin(P)+90*cos(P)**4*sin(P)-60*cos(P)**6*sin(P)+5*cos(P)*sin(P)*cos(T)))
+	y = factor*(-1/15*sin(P)*(3*cos(T)-3*cos(P)**2*cos(T)-48*cos(P)**4*cos(T)+48*cos(P)**6*cos(T)-60*sin(P)+5*cos(P)*sin(P)*cos(T)-5*cos(P)**3*sin(P)*cos(T)-80*cos(P)**5*sin(P)*cos(T)+80*cos(P)**7*sin(P)*cos(T)))
+	z = factor*(3/15*(3+5*cos(P)*sin(P))*sin(T))
 
 if plot == 'klein8':
 	grid = args.grid
@@ -104,10 +96,9 @@ if plot == 'klein8':
 	p = np.linspace(args.llp,args.ulp,grid)
 	t = np.linspace(args.llt,args.ult,grid)
 	P,T = np.meshgrid(p, t)
-	r = factor
-	x = r*cos(T)*(2+cos(T/2)*sin(P)-sin(T/2)*sin(2*P))
-	y = r*sin(T)*(2+cos(T/2)*sin(P)-sin(T/2)*sin(2*P))
-	z = r*(sin(T/2)*sin(P)+cos(T/2)*sin(2*P))
+	x = factor*cos(T)*(2+cos(T/2)*sin(P)-sin(T/2)*sin(2*P))
+	y = factor*sin(T)*(2+cos(T/2)*sin(P)-sin(T/2)*sin(2*P))
+	z = factor*(sin(T/2)*sin(P)+cos(T/2)*sin(2*P))
 
 if plot == 'shell':
 	grid = args.grid
@@ -115,10 +106,9 @@ if plot == 'shell':
 	p = np.linspace(args.llp,args.ulp,grid)
 	t = np.linspace(args.llt,args.ult,grid)
 	P,T = np.meshgrid(p, t)
-	r = factor
-	x = r*(T*sin(T)*cos(P))
-	y = r*(T*cos(T)*cos(P))
-	z = r*(T*sin(P))
+	x = factor*(T*sin(T)*cos(P))
+	y = factor*(T*cos(T)*cos(P))
+	z = factor*(T*sin(P))
 
 if plot == 'booster':
 	grid = args.grid
@@ -126,25 +116,24 @@ if plot == 'booster':
 	p = np.linspace(args.llp,args.ulp,grid)
 	t = np.linspace(args.llt,args.ult,grid)
 	P,T = np.meshgrid(p, t)
-	r = factor
-	x = r*(cos(P)-cos(T))
-	y = r*(sin(P)-sin(T))
-	z = r*(T)
+	x = factor*(cos(P)-cos(T))
+	y = factor*(sin(P)-sin(T))
+	z = factor*(T)
 
+#function generated by user input
 if plot == 'new':
 	grid = args.grid
 	area = grid*grid
 	p = np.linspace(args.llp,args.ulp,grid)
 	t = np.linspace(args.llt,args.ult,grid)
 	P,T = np.meshgrid(p, t)
-	r = factor*eval('%s' % args.r)
 	x = factor*eval('%s' % args.x)
 	y = factor*eval('%s' % args.y)
 	z = factor*eval('%s' % args.z)
 
 contador1 = 0
 
-#function
+#write information to be read by pymol
 with open('parametric.pdb', 'w') as f:
     f.write("TITLE     Function\n")
     f.write("CRYST1  {}  {}   {}  90.00  90.00  90.00\n".format(xsize,ysize,zsize))
