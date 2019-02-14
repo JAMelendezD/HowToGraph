@@ -34,7 +34,7 @@ For this to work you will need to install pymol:
 
 If everything is correctly installed the program will create a function and open it using pymol if you need a tutorial on how to use pymol you can check this link [Pymol tutorial](https://jamelendezd.github.io/MolecularDynamicsPymol/). The program also creates a colormap of the function and can be open by typing in the terminal:
 
-`pymol colormap.pml`
+`pymol showmap.pml`
 
 If you want to try a parametric equation you can run it as follows:
 
