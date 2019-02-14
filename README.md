@@ -44,6 +44,10 @@ If you want to try a parametric equation you can run it as follows:
   <img width="500" src="./pymol/media/torus.png">
 </p>
 
+You can also use the module orbitals to graph electron orbitals (see images below) only by typing the quantum numbers like this:
+
+`python3 orbitals.py abs 2 0 100 50`
+
 For information about the parameters you can type `python3 functiontopymol.py -h`. Pymol can also be downloaded in windows however if the path is not correctly set up, the program will still work but you have to open pymol manually and type in the pymol terminal: 
 
 `run showfunction.pml`
@@ -69,6 +73,13 @@ Another main advantage of pymol is that you can save the image as a wrl format t
   <img width="210" src="./pymol/media/multiple.png">
    <img width="200" src="./pymol/media/8.png">
   <img width="210" src="./pymol/media/multiple2.png">
+</p>
+
+<p align="center">
+  <img width="200" src="./pymol/media/4-2real.png">
+  <img width="210" src="./pymol/media/4-2.png">
+   <img width="200" src="./pymol/media/30.png">
+  <img width="210" src="./pymol/media/double20.png">
 </p>
 
 <p align="center">
