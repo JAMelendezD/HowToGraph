@@ -86,5 +86,5 @@ Another main advantage of pymol is that you can save the image as a wrl format t
   <img width="200" src="./pymol/media/map6.png">
   <img width="200" src="./pymol/media/map4.png">
   <img width="200" src="./pymol/media/map5.png">
-  <img width="200" src="./pymol/media/map3.png">
+  <img width="210" src="./pymol/media/map3.png">
 </p>
