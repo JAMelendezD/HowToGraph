@@ -5,7 +5,7 @@
 Basic scripts using matplot to create high quality plots, animations, 3d plots and much more. 
 
 <p align="center">
-  <img width="600" src="./matplotlib/Images/histogram_subplots.png">
+  <img width="700" src="./matplotlib/Images/histogram_subplots.png">
 </p>
 
 <p align="center">
