@@ -91,7 +91,16 @@ Another main advantage of pymol is that you can save the image as a wrl format t
 
 <p align="center">
   <img width="300" src="./pymol/media/waals.gif">
-  <img width="300" src="./pymol/media/collision.gif">
-  <img width="300" src="./pymol/media/lorentz.gif">
+  <img width="300" src="./pymol/media/astro.gif">
 </p>
+
+<p align="center">
+  <img width="300" src="./pymol/media/fall.gif">
+  <img width="300" src="./pymol/media/collision.gif">
+</p>
+
+<p align="center">
+  <img width="800" src="./pymol/media/lorentz.gif">
+</p>
+
 
