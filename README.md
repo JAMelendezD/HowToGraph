@@ -100,7 +100,7 @@ Another main advantage of pymol is that you can save the image as a wrl format t
 </p>
 
 <p align="center">
-  <img width="800" src="./pymol/media/lorentz.gif">
+  <img width="500" src="./pymol/media/lorentz.gif">
 </p>
 
 
